@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth dark">
+<html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$HCAT | HyperCat - El Gato Cuántico de Solana en Pump.fun</title>
-    <meta name="description" content="Lanzamiento justo en Pump.fun. Sin preventas, 0% impuestos, liquidez 100% quemada al graduar a Raydium. Únete a la revolución cuántica de $HCAT en Solana.">
+    <title>$HCAT | HyperCat - The Quantum Meme on Solana & Pump.fun</title>
+    <meta name="description" content="Fair launch on Pump.fun. Zero presale, 0% buy/sell tax, 100% liquidity burnt upon Raydium graduation. Join the $HCAT Quantum Laser Cat revolution on Solana.">
     
     <!-- Google Fonts: Syne (Display), Space Grotesk (Body), JetBrains Mono (Code/CA) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,12 +36,11 @@
                         'float': 'float 5s ease-in-out infinite',
                         'marquee': 'marquee 28s linear infinite',
                         'pulse-glow': 'pulseGlow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'spin-slow': 'spin 12s linear infinite',
                     },
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-16px) rotate(2deg)' },
+                            '50%': { transform: 'translateY(-14px) rotate(1.5deg)' },
                         },
                         marquee: {
                             '0%': { transform: 'translateX(0%)' },
@@ -49,7 +48,7 @@
                         },
                         pulseGlow: {
                             '0%, 100%': { opacity: 1, boxShadow: '0 0 20px rgba(20, 241, 149, 0.5)' },
-                            '50%': { opacity: 0.75, boxShadow: '0 0 38px rgba(153, 69, 255, 0.8)' },
+                            '50%': { opacity: 0.85, boxShadow: '0 0 38px rgba(153, 69, 255, 0.85)' },
                         }
                     }
                 }
@@ -58,7 +57,7 @@
     </script>
 
     <style>
-        /* Estilos base y prevencion de desbordamiento horizontal */
+        /* Base styles and horizontal overflow prevention */
         html, body {
             background-color: #06060A;
             color: #F8FAFC;
@@ -66,22 +65,22 @@
             max-width: 100vw;
         }
 
-        /* Tipografía fluida con clamp() */
+        /* Fluid Typography using clamp() */
         .hero-title {
-            font-size: clamp(2.6rem, 6.2vw, 5.2rem);
-            line-height: 1.02;
+            font-size: clamp(2.5rem, 5.8vw, 4.9rem);
+            line-height: 1.03;
             letter-spacing: -0.03em;
         }
 
         .section-title {
-            font-size: clamp(2rem, 4.2vw, 3.3rem);
+            font-size: clamp(2rem, 4.2vw, 3.25rem);
             line-height: 1.1;
             letter-spacing: -0.02em;
         }
 
-        /* Efecto Glassmorphism y Neo-Brutalism */
+        /* Glassmorphism & Neo-Brutalism */
         .glass-card {
-            background: rgba(13, 14, 21, 0.72);
+            background: rgba(13, 14, 21, 0.74);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -103,7 +102,7 @@
             box-shadow: 2px 2px 0px #14F195;
         }
 
-        /* Degradado Solana Neon */
+        /* Solana Neon Gradients */
         .solana-gradient-text {
             background: linear-gradient(90deg, #14F195 0%, #00F0FF 48%, #9945FF 100%);
             -webkit-background-clip: text;
@@ -114,7 +113,7 @@
             background: linear-gradient(135deg, #14F195 0%, #00F0FF 50%, #9945FF 100%);
         }
 
-        /* Fondo de cuadrícula cibernética sutil */
+        /* Cybernetic Grid Background */
         .cyber-grid {
             background-size: 44px 44px;
             background-image: 
@@ -122,12 +121,36 @@
                 linear-gradient(to bottom, rgba(153, 69, 255, 0.045) 1px, transparent 1px);
         }
 
-        /* Efecto Glitch sutil en hover */
+        /* Subtle Glitch Hover */
         .glitch-hover:hover {
             text-shadow: 2px 0 #14F195, -2px 0 #9945FF;
         }
 
-        /* Scrollbar personalizada */
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: #14F195;
+            border: 2px solid #06060A;
+            cursor: pointer;
+            margin-top: -6px;
+            box-shadow: 0 0 10px #14F195;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: linear-gradient(90deg, #14F195, #00F0FF, #9945FF);
+            border-radius: 999px;
+        }
+
+        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -142,61 +165,67 @@
 </head>
 <body class="font-sans antialiased selection:bg-solanaGreen selection:text-void cyber-grid relative">
 
-    <!-- Canvas de Partículas Cuánticas en el fondo -->
+    <!-- Quantum Background Particles Canvas -->
     <canvas id="quantumCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-60"></canvas>
 
-    <!-- Toast Notification (Reemplazo moderno y seguro de alert) -->
+    <!-- Toast Notification (Safe non-blocking replacement for alert) -->
     <div id="toastNotification" class="fixed bottom-5 right-5 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
         <div class="glass-card border-2 border-solanaGreen px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
             <span class="flex h-3 w-3 relative">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-solanaGreen opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-solanaGreen"></span>
             </span>
-            <p id="toastMessage" class="font-mono text-sm font-bold text-white">¡CA Copiado al portapapeles! 🚀</p>
+            <p id="toastMessage" class="font-mono text-sm font-bold text-white">COPIED TO CLIPBOARD! 🚀</p>
         </div>
     </div>
 
     <!-- ===================================================================== -->
-    <!-- 1. NAVBAR FLOTANTE CON GLASSMORPHISM                                  -->
+    <!-- 1. FLOATING GLASSMORPHISM NAVBAR                                      -->
     <!-- ===================================================================== -->
     <header class="fixed top-0 left-0 right-0 z-40 px-3 sm:px-6 pt-3 sm:pt-4">
         <nav class="max-w-7xl mx-auto glass-card rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.65)]">
             
-            <!-- Logo Animado -->
+            <!-- Custom HyperCat Emblem Logo -->
             <a href="#" class="flex items-center gap-2.5 group">
-                <div class="w-10 h-10 rounded-xl solana-gradient-bg p-0.5 shadow-lg group-hover:rotate-6 transition-transform">
+                <div class="w-11 h-11 rounded-xl solana-gradient-bg p-0.5 shadow-lg group-hover:rotate-3 transition-transform">
                     <div class="w-full h-full bg-void rounded-[10px] flex items-center justify-center">
-                        <!-- Mini Icono SVG Gato Cuántico -->
-                        <svg class="w-6 h-6" viewBox="0 0 64 64" fill="none">
-                            <path d="M12 10L22 22H42L52 10L54 36C54 48 44 56 32 56C20 56 10 48 10 36L12 10Z" fill="#151722" stroke="#14F195" stroke-width="3"/>
-                            <rect x="16" y="28" width="32" height="8" rx="4" fill="#9945FF"/>
-                            <line x1="8" y1="32" x2="56" y2="32" stroke="#00F0FF" stroke-width="2.5" stroke-linecap="round"/>
+                        <!-- Mini Leaping Laser Cyber Cat SVG -->
+                        <svg class="w-8 h-8" viewBox="0 0 80 80" fill="none">
+                            <circle cx="42" cy="40" r="28" stroke="#9945FF" stroke-width="3"/>
+                            <path d="M22 32L18 18L30 25L38 18L39 32C48 31 56 36 62 28C64 25 67 27 65 31C61 39 54 42 48 42L56 50C58 52 55 55 52 53L41 44L29 45L19 54C16 56 13 53 16 50L25 40C21 38 20 35 22 32Z" fill="#0D0E15" stroke="#14F195" stroke-width="2.5" stroke-linejoin="round"/>
+                            <circle cx="27" cy="30" r="2.2" fill="#14F195"/>
+                            <circle cx="34" cy="30" r="2.2" fill="#14F195"/>
+                            <line x1="4" y1="36" x2="27" y2="30" stroke="#14F195" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="4" y1="39" x2="34" y2="30" stroke="#00F0FF" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
                 </div>
                 <div>
-                    <span class="font-display font-extrabold text-xl tracking-tight text-white group-hover:text-solanaGreen transition-colors">$HCAT</span>
-                    <span class="hidden sm:inline-block ml-1.5 text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-solanaGreen/15 text-solanaGreen border border-solanaGreen/30">SOLANA</span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="font-display font-extrabold text-lg sm:text-xl tracking-tight text-white group-hover:text-solanaGreen transition-colors">HYPERCAT</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-solanaGreen/15 text-solanaGreen border border-solanaGreen/30 font-bold">$HCAT</span>
+                    </div>
+                    <span class="hidden sm:block text-[10px] font-mono tracking-widest text-slate-400 uppercase">The Quantum Meme</span>
                 </div>
             </a>
 
-            <!-- Enlaces Rápidos Desktop -->
+            <!-- Desktop Quick Navigation Links -->
             <div class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-                <a href="#narrativa" class="hover:text-solanaGreen transition-colors">Narrativa</a>
+                <a href="#about" class="hover:text-solanaGreen transition-colors">About</a>
                 <a href="#bonding-curve" class="hover:text-solanaGreen transition-colors flex items-center gap-1.5">
                     Bonding Curve
                     <span class="w-2 h-2 rounded-full bg-solanaGreen animate-pulse"></span>
                 </a>
                 <a href="#tokenomics" class="hover:text-solanaGreen transition-colors">Tokenomics</a>
-                <a href="#meme-generator" class="hover:text-cyberCyan transition-colors">Meme Studio</a>
-                <a href="#como-comprar" class="hover:text-solanaGreen transition-colors">Cómo Comprar</a>
+                <a href="#meme-studio" class="hover:text-cyberCyan transition-colors">Meme Studio</a>
+                <a href="#how-to-buy" class="hover:text-solanaGreen transition-colors">How to Buy</a>
                 <a href="#roadmap" class="hover:text-solanaGreen transition-colors">Roadmap</a>
             </div>
 
-            <!-- Botones de Acción Navbar -->
+            <!-- Navbar Action Buttons -->
             <div class="flex items-center gap-2 sm:gap-3">
-                <!-- Botón Copiar CA Rápido -->
-                <button onclick="copyCA()" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surfaceLight hover:bg-white/10 border border-white/10 text-xs font-mono text-slate-200 transition-all active:scale-95" title="Copiar Contract Address">
+                <!-- Quick Copy CA Button -->
+                <button onclick="copyCA()" class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surfaceLight hover:bg-white/10 border border-white/10 text-xs font-mono text-slate-200 transition-all active:scale-95 cursor-pointer" title="Copy Contract Address">
                     <span class="text-solanaGreen font-bold">CA:</span>
                     <span>HCat9x...Pump</span>
                     <svg class="w-3.5 h-3.5 text-solanaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,22 +233,22 @@
                     </svg>
                 </button>
 
-                <!-- Botón Conectar Wallet Simulado / Estado Degen -->
-                <button id="walletBtn" onclick="toggleWalletConnect()" class="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-solanaPurple/50 bg-solanaPurple/15 hover:bg-solanaPurple/25 text-xs font-mono font-semibold text-white transition-all">
-                    <span class="w-2 h-2 rounded-full bg-solanaPurple"></span>
-                    <span id="walletBtnText">Conectar Phantom</span>
+                <!-- Simulated Connect Wallet Button -->
+                <button id="walletBtn" onclick="toggleWalletConnect()" class="hidden md:flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-solanaPurple/50 bg-solanaPurple/15 hover:bg-solanaPurple/25 text-xs font-mono font-semibold text-white transition-all cursor-pointer">
+                    <span class="w-2 h-2 rounded-full bg-solanaGreen"></span>
+                    <span id="walletBtnText">Connect Wallet</span>
                 </button>
 
-                <!-- Botón CTA Principal Pump.fun -->
+                <!-- Primary Pump.fun CTA -->
                 <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="px-3.5 sm:px-5 py-2.5 rounded-xl bg-solanaGreen text-void font-display font-extrabold text-xs sm:text-sm tracking-wide hover:brightness-110 transition-all animate-pulse-glow flex items-center gap-1.5 whitespace-nowrap">
-                    <span>COMPRAR EN PUMP.FUN</span>
+                    <span>BUY ON PUMP.FUN</span>
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
 
-                <!-- Botón Menú Hamburguesa Móvil -->
-                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Abrir menú" class="lg:hidden p-2.5 rounded-xl bg-surfaceLight border border-white/10 text-white hover:text-solanaGreen focus:outline-none">
+                <!-- Mobile Hamburger Toggle -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-surfaceLight border border-white/10 text-white hover:text-solanaGreen focus:outline-none">
                     <svg id="menuIconOpen" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -230,21 +259,21 @@
             </div>
         </nav>
 
-        <!-- Menú Desplegable Móvil -->
+        <!-- Mobile Dropdown Menu -->
         <div id="mobileMenu" class="hidden lg:hidden max-w-7xl mx-auto mt-2 glass-card rounded-2xl p-5 border border-solanaGreen/30 shadow-2xl">
-            <div class="flex flex-col space-y-3 text-base font-medium">
-                <a href="#narrativa" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">🐱 Narrativa Cuántica</a>
-                <a href="#bonding-curve" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">📈 Simulador Bonding Curve</a>
-                <a href="#tokenomics" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">💎 Tokenomics Fair-Launch</a>
-                <a href="#meme-generator" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-cyberCyan">🎨 Generador de Memes / PFP</a>
-                <a href="#como-comprar" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">⚡ Cómo Comprar en 3 Pasos</a>
-                <a href="#roadmap" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">🚀 Roadmap a Raydium</a>
+            <div class="flex flex-col space-y-2.5 text-base font-medium">
+                <a href="#about" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">⚡ Why HyperCat?</a>
+                <a href="#bonding-curve" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">📈 Bonding Curve Simulator</a>
+                <a href="#tokenomics" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">💎 Fair-Launch Tokenomics</a>
+                <a href="#meme-studio" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-cyberCyan">🎨 $HCAT Meme Studio</a>
+                <a href="#how-to-buy" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">🚀 How to Buy in 3 Steps</a>
+                <a href="#roadmap" onclick="toggleMobileMenu()" class="py-2 px-3 rounded-xl hover:bg-white/5 text-slate-200 hover:text-solanaGreen">🌌 Quantum Roadmap</a>
                 <div class="pt-3 border-t border-white/10 flex flex-col sm:flex-row gap-2.5">
                     <button onclick="copyCA(); toggleMobileMenu();" class="w-full py-3 px-4 rounded-xl bg-surfaceLight border border-solanaGreen/40 font-mono text-xs text-solanaGreen font-bold flex items-center justify-center gap-2">
-                        <span>Copiar CA: HCat9x...Pump</span>
+                        <span>Copy CA: HCat9x...Pump</span>
                     </button>
                     <button onclick="toggleWalletConnect(); toggleMobileMenu();" class="w-full py-3 px-4 rounded-xl bg-solanaPurple/20 border border-solanaPurple font-mono text-xs text-white font-bold">
-                        Conectar Wallet Solana
+                        Connect Solana Wallet
                     </button>
                 </div>
             </div>
@@ -252,36 +281,36 @@
     </header>
 
     <!-- ===================================================================== -->
-    <!-- 2. HERO SECTION EXPLOSIVO                                             -->
+    <!-- 2. HERO SECTION                                                       -->
     <!-- ===================================================================== -->
     <main class="relative z-10 pt-28 sm:pt-36 pb-16">
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
                 
-                <!-- Columna Izquierda: Copywriting de Alta Conversión + CA Widget -->
+                <!-- Left Column: High-Converting Copywriting + Contract Terminal -->
                 <div class="lg:col-span-7 text-center lg:text-left">
-                    <!-- Badge En Vivo -->
+                    <!-- Live Badge -->
                     <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-solanaGreen/10 border border-solanaGreen/40 mb-6 shadow-[0_0_25px_rgba(20,241,149,0.2)]">
                         <span class="relative flex h-3 w-3">
                             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-solanaGreen opacity-75"></span>
                             <span class="relative inline-flex rounded-full h-3 w-3 bg-solanaGreen"></span>
                         </span>
                         <span class="font-mono text-xs sm:text-sm font-bold tracking-wider text-solanaGreen uppercase">
-                            LIVE ON PUMP.FUN • SOLANA NETWORK
+                            LIVE ON PUMP.FUN • SOLANA MAINNET
                         </span>
                     </div>
 
-                    <!-- Título Gigante -->
+                    <!-- Giant Headline -->
                     <h1 class="hero-title font-display font-extrabold text-white mb-6 glitch-hover">
-                        <span class="solana-gradient-text">$HCAT:</span> EL GATO CUÁNTICO QUE ROMPE LA <span class="underline decoration-solanaPurple decoration-4 underline-offset-8">BONDING CURVE</span>
+                        <span class="solana-gradient-text">$HCAT:</span> The First Solana Memecoin Powered by <span class="underline decoration-solanaPurple decoration-4 underline-offset-8">Quantum Laser Cat</span> Mechanics.
                     </h1>
 
-                    <!-- Subtítulo Persuasivo -->
+                    <!-- Persuasive Subtitle -->
                     <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-                        Schrödinger dijo que el gato estaba vivo y muerto. En Solana, <strong class="text-white">$HCAT está 100% pumping</strong>. Lanzamiento ultra justo en Pump.fun: <span class="text-solanaGreen font-semibold">sin preventas, sin insiders, 0% impuestos</span> y liquidez quemada automáticamente al graduar a Raydium.
+                        Schrödinger said the cat was both alive and dead. On Solana, <strong class="text-white">$HCAT is 100% pumping</strong>. Pure Pump.fun fair launch: <span class="text-solanaGreen font-semibold">zero presale, zero insiders, 0% tax</span>, and liquidity permanently burnt at Raydium graduation.
                     </p>
 
-                    <!-- Widget de Contract Address (CA) Interactivo estilo Terminal -->
+                    <!-- Interactive Contract Address (CA) Terminal Widget -->
                     <div class="max-w-2xl mx-auto lg:mx-0 mb-8">
                         <div class="glass-card rounded-2xl p-2 sm:p-2.5 border-2 border-solanaGreen/50 shadow-[0_0_35px_rgba(20,241,149,0.15)]">
                             <div class="flex items-center justify-between px-3 py-1 border-b border-white/10 mb-2">
@@ -291,7 +320,7 @@
                                     <span class="w-2.5 h-2.5 rounded-full bg-solanaGreen"></span>
                                     <span class="ml-2 font-mono text-[11px] text-slate-400">solana-mainnet // contract-address</span>
                                 </div>
-                                <span class="font-mono text-[11px] text-solanaGreen font-bold">VERIFIED PUMP</span>
+                                <span class="font-mono text-[11px] text-solanaGreen font-bold">FAIR LAUNCH VERIFIED</span>
                             </div>
                             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                                 <div class="flex-1 bg-void/90 rounded-xl px-3.5 py-3 border border-white/5 overflow-x-auto">
@@ -301,23 +330,21 @@
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
                                     </svg>
-                                    <span id="copyBtnLabel">COPIAR CA</span>
+                                    <span id="copyBtnLabel">COPY CA</span>
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Enlaces Directos del Ecosistema Degen (Pump.fun, DexScreener, Raydium, X, Telegram) -->
+                    <!-- Degen Ecosystem Links (Pump.fun, DexScreener, Raydium, X, Telegram) -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
-                        <!-- Pump.fun -->
-                        <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-3 rounded-xl bg-surfaceLight hover:bg-solanaGreen/20 border border-white/10 hover:border-solanaGreen text-sm font-bold text-white transition-all">
-                            <svg class="w-5 h-5 text-solanaGreen" viewBox="0 0 24 24" fill="currentColor">
+                        <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-3 rounded-xl bg-solanaGreen/15 hover:bg-solanaGreen hover:text-void border border-solanaGreen text-sm font-bold text-solanaGreen transition-all">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M16.5 3.5c-2.2-2.2-5.8-2.2-8 0l-5 5c-2.2 2.2-2.2 5.8 0 8s5.8 2.2 8 0l5-5c2.2-2.2 2.2-5.8 0-8zm-1.4 6.6l-2.5 2.5-4.2-4.2 2.5-2.5c1.2-1.2 3.1-1.2 4.2 0 1.2 1.1 1.2 3 0 4.2z"/>
                             </svg>
                             <span>Pump.fun</span>
                         </a>
 
-                        <!-- DexScreener -->
                         <a href="https://dexscreener.com/solana" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-3 rounded-xl bg-surfaceLight hover:bg-cyberCyan/20 border border-white/10 hover:border-cyberCyan text-sm font-bold text-white transition-all">
                             <svg class="w-5 h-5 text-cyberCyan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M3 3v18h18" stroke-linecap="round" stroke-linejoin="round"/>
@@ -326,7 +353,6 @@
                             <span>DexScreener</span>
                         </a>
 
-                        <!-- Raydium -->
                         <a href="https://raydium.io/swap/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-3 rounded-xl bg-surfaceLight hover:bg-solanaPurple/20 border border-white/10 hover:border-solanaPurple text-sm font-bold text-white transition-all">
                             <svg class="w-5 h-5 text-solanaPurple" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polygon points="12 2 21 7 21 17 12 22 3 17 3 7 12 2"/>
@@ -335,14 +361,12 @@
                             <span>Raydium</span>
                         </a>
 
-                        <!-- X (Twitter) -->
                         <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter" class="p-3 rounded-xl bg-surfaceLight hover:bg-white/15 border border-white/10 text-white transition-all">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                             </svg>
                         </a>
 
-                        <!-- Telegram -->
                         <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="p-3 rounded-xl bg-surfaceLight hover:bg-sky-500/20 border border-white/10 hover:border-sky-400 text-sky-400 transition-all">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
@@ -351,200 +375,231 @@
                     </div>
                 </div>
 
-                <!-- Columna Derecha: Mascota SVG Cibernética de Alta Calidad + Monedas Flotando -->
+                <!-- Right Column: Leaping Cybernetic HyperCat Emblem SVG -->
                 <div class="lg:col-span-5 flex justify-center items-center relative">
-                    <!-- Resplandor detrás de la mascota -->
                     <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-solanaPurple/35 via-solanaGreen/25 to-cyberCyan/35 blur-3xl animate-pulse"></div>
                     
-                    <!-- Contenedor Flotante de la Mascota -->
-                    <div class="relative w-full max-w-[380px] sm:max-w-[440px] animate-float">
-                        <svg viewBox="0 0 420 420" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(20,241,149,0.35)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="relative w-full max-w-[410px] sm:max-w-[460px] animate-float">
+                        <svg viewBox="0 0 460 440" class="w-full h-auto drop-shadow-[0_20px_50px_rgba(20,241,149,0.35)]" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <defs>
-                                <linearGradient id="cyberSuit" x1="80" y1="60" x2="340" y2="380" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0%" stop-color="#1E2235"/>
-                                    <stop offset="50%" stop-color="#11131F"/>
-                                    <stop offset="100%" stop-color="#090A10"/>
+                                <linearGradient id="ringGrad" x1="60" y1="40" x2="390" y2="390" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#00F0FF"/>
+                                    <stop offset="50%" stop-color="#9945FF"/>
+                                    <stop offset="100%" stop-color="#14F195"/>
                                 </linearGradient>
-                                <linearGradient id="neonRim" x1="0" y1="0" x2="420" y2="420" gradientUnits="userSpaceOnUse">
+                                <linearGradient id="catNeon" x1="110" y1="90" x2="360" y2="270" gradientUnits="userSpaceOnUse">
                                     <stop offset="0%" stop-color="#14F195"/>
-                                    <stop offset="50%" stop-color="#00F0FF"/>
+                                    <stop offset="55%" stop-color="#00F0FF"/>
                                     <stop offset="100%" stop-color="#9945FF"/>
                                 </linearGradient>
-                                <linearGradient id="visorGlow" x1="115" y1="175" x2="305" y2="215" gradientUnits="userSpaceOnUse">
+                                <linearGradient id="bannerText" x1="90" y1="265" x2="370" y2="315" gradientUnits="userSpaceOnUse">
                                     <stop offset="0%" stop-color="#14F195"/>
-                                    <stop offset="50%" stop-color="#00F0FF"/>
-                                    <stop offset="100%" stop-color="#9945FF"/>
+                                    <stop offset="100%" stop-color="#00F0FF"/>
                                 </linearGradient>
-                                <filter id="laserBlur" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feGaussianBlur stdDeviation="6" result="blur"/>
+                                <filter id="neonGlow" x="-25%" y="-25%" width="150%" height="150%">
+                                    <feGaussianBlur stdDeviation="5" result="blur"/>
                                     <feComposite in="SourceGraphic" in2="blur" operator="over"/>
                                 </filter>
                             </defs>
 
-                            <!-- Anillo Orbital Cuántico -->
-                            <ellipse cx="210" cy="220" rx="185" ry="72" transform="rotate(-14 210 220)" stroke="url(#neonRim)" stroke-width="2.5" stroke-dasharray="10 8" opacity="0.65"/>
-                            <ellipse cx="210" cy="220" rx="165" ry="58" transform="rotate(16 210 220)" stroke="#9945FF" stroke-width="1.5" opacity="0.5"/>
+                            <!-- Outer Quantum Emblem Circle -->
+                            <circle cx="245" cy="205" r="152" fill="#090A12" stroke="url(#ringGrad)" stroke-width="6"/>
+                            <circle cx="245" cy="205" r="138" stroke="#9945FF" stroke-width="2" stroke-dasharray="14 8" opacity="0.65"/>
 
-                            <!-- Moneda Solana Flotante Izquierda -->
-                            <g transform="translate(38, 105) rotate(-15)">
-                                <circle cx="28" cy="28" r="26" fill="#0D0E15" stroke="#14F195" stroke-width="3"/>
-                                <path d="M16 21H36L40 17H20L16 21ZM16 30H40L36 26H12L16 30ZM20 39H40L36 35H16L20 39Z" fill="url(#neonRim)"/>
+                            <!-- Circuit Board Lines inside Emblem -->
+                            <g stroke="#9945FF" stroke-width="2" opacity="0.45">
+                                <path d="M135 160H170L188 142"/>
+                                <path d="M345 165H310L292 183"/>
+                                <path d="M335 235H295L278 218"/>
+                                <path d="M150 245H190L208 228"/>
+                                <circle cx="188" cy="142" r="3" fill="#14F195"/>
+                                <circle cx="292" cy="183" r="3" fill="#00F0FF"/>
+                                <circle cx="278" cy="218" r="3" fill="#14F195"/>
                             </g>
 
-                            <!-- Moneda Pump Pill Flotante Derecha -->
-                            <g transform="translate(325, 85) rotate(18)">
-                                <circle cx="26" cy="26" r="24" fill="#0D0E15" stroke="#9945FF" stroke-width="3"/>
-                                <rect x="14" y="20" width="24" height="12" rx="6" fill="#14F195"/>
-                                <rect x="26" y="20" width="12" height="12" rx="6" fill="#FFFFFF"/>
+                            <!-- Floating Solana Astronaut Helmet & Tokens -->
+                            <g transform="translate(278, 92)">
+                                <circle cx="26" cy="26" r="24" fill="#0D0E15" stroke="#00F0FF" stroke-width="3"/>
+                                <circle cx="26" cy="26" r="17" fill="#151722" stroke="#9945FF" stroke-width="2"/>
+                                <path d="M17 21H33L36 18H20L17 21ZM17 27H36L33 24H14L17 27ZM20 33H36L33 30H17L20 33Z" fill="#14F195"/>
                             </g>
 
-                            <!-- Casco Espacial Transparente Exterior -->
-                            <circle cx="210" cy="205" r="132" fill="rgba(0, 240, 255, 0.05)" stroke="url(#neonRim)" stroke-width="4"/>
+                            <!-- Floating Solana Particle Coins -->
+                            <circle cx="395" cy="95" r="11" fill="#0D0E15" stroke="#14F195" stroke-width="2.5"/>
+                            <circle cx="422" cy="70" r="6" fill="#14F195"/>
+                            <circle cx="378" cy="142" r="13" fill="#0D0E15" stroke="#9945FF" stroke-width="2.5"/>
+                            <circle cx="412" cy="128" r="8" fill="#0D0E15" stroke="#00F0FF" stroke-width="2"/>
 
-                            <!-- Orejas Cibernéticas del Gato -->
-                            <path d="M112 135L96 58L165 104Z" fill="url(#cyberSuit)" stroke="#14F195" stroke-width="4" stroke-linejoin="round"/>
-                            <path d="M118 122L108 78L150 106Z" fill="#9945FF" opacity="0.7"/>
+                            <!-- Leaping Cybernetic Geometric Cat Body -->
+                            <g filter="url(#neonGlow)">
+                                <!-- Tail -->
+                                <path d="M316 168C338 154 352 122 372 104C380 97 388 104 382 114C368 138 350 172 322 184" fill="#0D0E15" stroke="#14F195" stroke-width="4" stroke-linecap="round"/>
+
+                                <!-- Torso & Leaping Legs -->
+                                <path d="M210 172C242 152 284 150 322 174L365 204C373 210 368 222 357 218L326 204L344 232C350 241 339 249 331 241L298 206C272 204 246 210 225 224L186 254C176 261 166 250 175 241L205 210L164 238C154 245 144 234 153 225L198 182" fill="#0D0E15" stroke="url(#catNeon)" stroke-width="4.5" stroke-linejoin="round"/>
+
+                                <!-- Cybernetic Flow Stripes inside Cat Body -->
+                                <path d="M225 184C255 170 288 170 318 188" stroke="#14F195" stroke-width="3" stroke-linecap="round"/>
+                                <path d="M235 196C262 186 286 188 308 200" stroke="#9945FF" stroke-width="2.5" stroke-linecap="round"/>
+
+                                <!-- Geometric Low-Poly Cat Head -->
+                                <path d="M162 135L156 88L192 114L224 88L232 136C236 162 218 182 194 182C170 182 156 162 162 135Z" fill="#0D0E15" stroke="#14F195" stroke-width="4" stroke-linejoin="round"/>
+                                
+                                <!-- Geometric Facet Lines on Face -->
+                                <path d="M162 135L194 146L232 136M192 114L194 146M194 146L194 182M164 158L194 146L226 158" stroke="#9945FF" stroke-width="2"/>
+                                
+                                <!-- Smirk -->
+                                <path d="M182 164C189 170 199 170 206 164" stroke="#14F195" stroke-width="2.5" stroke-linecap="round"/>
+                            </g>
+
+                            <!-- Glowing Laser Eyes & Twin Laser Beams -->
+                            <circle cx="179" cy="136" r="5" fill="#FFFFFF" filter="url(#neonGlow)"/>
+                            <circle cx="206" cy="136" r="5" fill="#FFFFFF" filter="url(#neonGlow)"/>
+                            <line x1="12" y1="196" x2="179" y2="136" stroke="#14F195" stroke-width="5" stroke-linecap="round" filter="url(#neonGlow)"/>
+                            <line x1="12" y1="196" x2="179" y2="136" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                            <line x1="12" y1="212" x2="206" y2="136" stroke="#00F0FF" stroke-width="5" stroke-linecap="round" filter="url(#neonGlow)"/>
+                            <line x1="12" y1="212" x2="206" y2="136" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+                            <!-- Emblem Badge Plate: HYPERCAT $HCAT -->
+                            <path d="M96 262H394V316L374 328H116L96 316V262Z" fill="#090A12" stroke="#9945FF" stroke-width="4"/>
+                            <text x="245" y="303" text-anchor="middle" fill="url(#bannerText)" font-family="Syne, sans-serif" font-weight="800" font-size="38" letter-spacing="1">HYPERCAT</text>
                             
-                            <path d="M308 135L324 58L255 104Z" fill="url(#cyberSuit)" stroke="#00F0FF" stroke-width="4" stroke-linejoin="round"/>
-                            <path d="M302 122L312 78L270 106Z" fill="#14F195" opacity="0.7"/>
-
-                            <!-- Cabeza del Gato Cuántico -->
-                            <path d="M110 185C110 128 152 94 210 94C268 94 310 128 310 185C310 245 270 286 210 286C150 286 110 245 110 185Z" fill="url(#cyberSuit)" stroke="url(#neonRim)" stroke-width="4"/>
-
-                            <!-- Detalles Tecnológicos en la Frente -->
-                            <path d="M196 112L210 130L224 112" stroke="#14F195" stroke-width="3" stroke-linecap="round"/>
-                            <circle cx="210" cy="142" r="4" fill="#00F0FF"/>
-
-                            <!-- Gafas Láser Solana (Visor Futurista) -->
-                            <rect x="122" y="168" width="176" height="44" rx="14" fill="#06060A" stroke="url(#visorGlow)" stroke-width="4"/>
-                            <!-- Rayo Láser Interno -->
-                            <rect x="132" y="183" width="156" height="14" rx="7" fill="url(#visorGlow)" filter="url(#laserBlur)"/>
-                            <line x1="85" y1="190" x2="335" y2="190" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
-
-                            <!-- Hocico y Sonrisa Degen Confiada -->
-                            <path d="M198 232L210 242L222 232Z" fill="#14F195"/>
-                            <path d="M182 252C192 264 228 264 238 252" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
-                            
-                            <!-- Bigotes Neón -->
-                            <line x1="92" y1="224" x2="142" y2="230" stroke="#14F195" stroke-width="2.5" stroke-linecap="round"/>
-                            <line x1="88" y1="242" x2="140" y2="242" stroke="#00F0FF" stroke-width="2.5" stroke-linecap="round"/>
-                            <line x1="278" y1="230" x2="328" y2="224" stroke="#9945FF" stroke-width="2.5" stroke-linecap="round"/>
-                            <line x1="280" y1="242" x2="332" y2="242" stroke="#00F0FF" stroke-width="2.5" stroke-linecap="round"/>
-
-                            <!-- Collar / Armadura Cuántica Inferior -->
-                            <path d="M135 284C155 315 265 315 285 284L305 348C250 372 170 372 115 348L135 284Z" fill="url(#cyberSuit)" stroke="url(#neonRim)" stroke-width="4"/>
-                            <!-- Medallón $HCAT -->
-                            <circle cx="210" cy="322" r="24" fill="#06060A" stroke="#14F195" stroke-width="3"/>
-                            <text x="210" y="327" text-anchor="middle" fill="#14F195" font-family="JetBrains Mono, monospace" font-weight="800" font-size="13">$HCAT</text>
+                            <rect x="155" y="324" width="180" height="44" rx="10" fill="#090A12" stroke="#14F195" stroke-width="2.5"/>
+                            <text x="245" y="354" text-anchor="middle" fill="#FFFFFF" font-family="JetBrains Mono, monospace" font-weight="800" font-size="28">$HCAT</text>
+                            <text x="245" y="386" text-anchor="middle" fill="#14F195" font-family="JetBrains Mono, monospace" font-weight="700" font-size="11" letter-spacing="2">THE QUANTUM MEME</text>
                         </svg>
-
-                        <!-- Tarjeta Flotante de Estado en Vivo sobre la mascota -->
-                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 glass-card px-4 py-2 rounded-xl border border-solanaGreen/50 flex items-center gap-3 whitespace-nowrap shadow-xl">
-                            <span class="text-xs font-mono text-slate-400">ESTADO:</span>
-                            <span class="text-xs font-mono font-bold text-solanaGreen">MODO PARABÓLICO ⚡</span>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================== -->
-        <!-- 3. TICKER MARQUEE INFINITO                                            -->
+        <!-- 3. INFINITE MARQUEE TICKER                                            -->
         <!-- ===================================================================== -->
-        <div class="mt-16 sm:mt-24 border-y-2 border-solanaGreen/40 bg-surface/90 py-3.5 overflow-hidden relative">
+        <div class="mt-14 sm:mt-20 border-y-2 border-solanaGreen/40 bg-surface/90 py-3.5 overflow-hidden relative">
             <div class="flex w-max animate-marquee">
-                <!-- Bloque 1 -->
                 <div class="flex items-center gap-8 px-4 font-display font-extrabold text-sm sm:text-base tracking-wider uppercase">
                     <span class="text-solanaGreen">⚡ FAIR LAUNCH ON PUMP.FUN</span>
                     <span class="text-slate-600">◆</span>
                     <span class="text-white">0% BUY / 0% SELL TAX</span>
                     <span class="text-slate-600">◆</span>
-                    <span class="text-cyberCyan">🔥 LP 100% BURNED ON GRADUATION</span>
+                    <span class="text-cyberCyan">🔥 LP 100% BURNT ON RAYDIUM GRADUATION</span>
                     <span class="text-slate-600">◆</span>
                     <span class="text-solanaPurple">💎 1,000,000,000 TOTAL SUPPLY</span>
                     <span class="text-slate-600">◆</span>
                     <span class="text-solanaGreen">🚫 NO TEAM ALLOCATION</span>
                     <span class="text-slate-600">◆</span>
-                    <span class="text-white">🚀 TO RAYDIUM & BEYOND</span>
+                    <span class="text-white">🚀 QUANTUM LASER CAT MECHANICS</span>
                     <span class="text-slate-600">◆</span>
                 </div>
-                <!-- Bloque 2 (Duplicado exacto para loop continuo sin cortes) -->
                 <div class="flex items-center gap-8 px-4 font-display font-extrabold text-sm sm:text-base tracking-wider uppercase" aria-hidden="true">
                     <span class="text-solanaGreen">⚡ FAIR LAUNCH ON PUMP.FUN</span>
                     <span class="text-slate-600">◆</span>
                     <span class="text-white">0% BUY / 0% SELL TAX</span>
                     <span class="text-slate-600">◆</span>
-                    <span class="text-cyberCyan">🔥 LP 100% BURNED ON GRADUATION</span>
+                    <span class="text-cyberCyan">🔥 LP 100% BURNT ON RAYDIUM GRADUATION</span>
                     <span class="text-slate-600">◆</span>
                     <span class="text-solanaPurple">💎 1,000,000,000 TOTAL SUPPLY</span>
                     <span class="text-slate-600">◆</span>
                     <span class="text-solanaGreen">🚫 NO TEAM ALLOCATION</span>
                     <span class="text-slate-600">◆</span>
-                    <span class="text-white">🚀 TO RAYDIUM & BEYOND</span>
+                    <span class="text-white">🚀 QUANTUM LASER CAT MECHANICS</span>
                     <span class="text-slate-600">◆</span>
                 </div>
             </div>
         </div>
 
         <!-- ===================================================================== -->
-        <!-- 4. SIMULADOR INTERACTIVO DE LA BONDING CURVE DE PUMP.FUN              -->
+        <!-- 4. INTERACTIVE PUMP.FUN BONDING CURVE SIMULATOR                       -->
         <!-- ===================================================================== -->
         <section id="bonding-curve" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-solanaGreen bg-solanaGreen/10 px-3.5 py-1.5 rounded-full border border-solanaGreen/30">
-                    SIMULADOR DE LIQUIDEZ EN TIEMPO REAL
+                    REAL-TIME LIQUIDITY SIMULATOR
                 </span>
                 <h2 class="section-title font-display font-extrabold text-white mt-4 mb-4">
-                    ROMPIENDO LA <span class="solana-gradient-text">BONDING CURVE</span>
+                    BREAKING THE <span class="solana-gradient-text">BONDING CURVE</span>
                 </h2>
                 <p class="text-slate-400 text-sm sm:text-base">
-                    Cuando la Bonding Curve alcanza los <strong class="text-white">85 SOL (~$69,000 Market Cap)</strong>, toda la liquidez se deposita automáticamente en <strong class="text-solanaPurple">Raydium</strong> y se quema para siempre. ¡Simula compras abajo y mira el impacto!
+                    When the Pump.fun Bonding Curve hits <strong class="text-white">85 SOL (~$69,000 Market Cap)</strong>, 100% of liquidity automatically migrates to <strong class="text-solanaPurple">Raydium</strong> and gets burnt forever. Simulate buys below!
                 </p>
             </div>
 
             <div class="glass-card rounded-3xl p-6 sm:p-10 border-2 border-solanaPurple/40 shadow-[0_0_50px_rgba(153,69,255,0.15)] relative overflow-hidden">
-                <!-- Métricas Superiores del Simulador -->
+                <!-- Top Metrics -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                     <div class="bg-void/80 rounded-2xl p-4 border border-white/10">
-                        <p class="font-mono text-xs text-slate-400 mb-1">SOL EN CURVA</p>
+                        <p class="font-mono text-xs text-slate-400 mb-1">SOL IN CURVE</p>
                         <p class="font-display font-extrabold text-2xl sm:text-3xl text-solanaGreen">
-                            <span id="solRaisedDisplay">62.5</span> <span class="text-sm font-mono text-slate-400">/ 85 SOL</span>
+                            <span id="solRaisedDisplay">63.8</span> <span class="text-sm font-mono text-slate-400">/ 85 SOL</span>
                         </p>
                     </div>
                     <div class="bg-void/80 rounded-2xl p-4 border border-white/10">
-                        <p class="font-mono text-xs text-slate-400 mb-1">MARKET CAP EST.</p>
+                        <p class="font-mono text-xs text-slate-400 mb-1">EST. MARKET CAP</p>
                         <p id="marketCapDisplay" class="font-display font-extrabold text-2xl sm:text-3xl text-white">
-                            $50,735
+                            $51,790
                         </p>
                     </div>
                     <div class="bg-void/80 rounded-2xl p-4 border border-white/10">
-                        <p class="font-mono text-xs text-slate-400 mb-1">PROGRESO CURVA</p>
+                        <p class="font-mono text-xs text-slate-400 mb-1">CURVE PROGRESS</p>
                         <p id="curvePercentDisplay" class="font-display font-extrabold text-2xl sm:text-3xl text-cyberCyan">
-                            73.5%
+                            75.1%
                         </p>
                     </div>
                     <div class="bg-void/80 rounded-2xl p-4 border border-white/10">
-                        <p class="font-mono text-xs text-slate-400 mb-1">ESTADO DEL POOL</p>
+                        <p class="font-mono text-xs text-slate-400 mb-1">POOL STATUS</p>
                         <p id="poolStatusDisplay" class="font-mono font-bold text-sm sm:text-base text-yellow-400 mt-1">
-                            ⚡ ACUMULANDO EN PUMP
+                            ⚡ KING OF THE HILL
                         </p>
                     </div>
                 </div>
 
-                <!-- Barra de Progreso Espectacular -->
-                <div class="mb-8">
-                    <div class="flex justify-between text-xs font-mono text-slate-400 mb-2">
-                        <span>0 SOL (Lanzamiento)</span>
-                        <span class="text-solanaGreen font-bold">META: 85 SOL (GRADUACIÓN RAYDIUM)</span>
-                    </div>
-                    <div class="w-full h-7 sm:h-9 bg-void rounded-full p-1 border border-white/15 overflow-hidden relative">
-                        <div id="bondingProgressBar" class="h-full rounded-full solana-gradient-bg transition-all duration-500 ease-out flex items-center justify-end pr-3 relative" style="width: 73.5%;">
-                            <span class="w-3 h-3 rounded-full bg-white shadow-[0_0_12px_#fff] animate-ping"></span>
+                <!-- Dynamic SVG Bonding Curve Chart + Progress Bar -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mb-8">
+                    <div class="lg:col-span-5 bg-void/90 rounded-2xl p-4 border border-white/10">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-mono text-[11px] text-slate-400">CURVE TRAJECTORY</span>
+                            <span class="font-mono text-[11px] text-solanaPurple font-bold">RAYDIUM THRESHOLD →</span>
                         </div>
+                        <svg viewBox="0 0 320 130" class="w-full h-32 overflow-visible">
+                            <defs>
+                                <linearGradient id="curveArea" x1="0" y1="0" x2="1" y2="0">
+                                    <stop offset="0%" stop-color="#14F195" stop-opacity="0.35"/>
+                                    <stop offset="75%" stop-color="#00F0FF" stop-opacity="0.25"/>
+                                    <stop offset="100%" stop-color="#9945FF" stop-opacity="0.4"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Grid lines -->
+                            <line x1="10" y1="115" x2="310" y2="115" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                            <line x1="10" y1="15" x2="10" y2="115" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                            <line x1="235" y1="15" x2="235" y2="115" stroke="#9945FF" stroke-width="1.5" stroke-dasharray="4 4"/>
+                            
+                            <!-- Area under curve -->
+                            <path d="M10 115 C 80 112, 160 95, 235 48 C 265 30, 290 20, 310 15 L 310 115 Z" fill="url(#curveArea)"/>
+                            <!-- Curve Stroke -->
+                            <path id="bondingSvgLine" d="M10 115 C 80 112, 160 95, 235 48 C 265 30, 290 20, 310 15" fill="none" stroke="#14F195" stroke-width="3.5" stroke-linecap="round"/>
+                            <!-- Active Position Marker -->
+                            <circle id="curveDot" cx="235" cy="48" r="6" fill="#FFFFFF" stroke="#14F195" stroke-width="3"/>
+                        </svg>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="flex justify-between text-xs font-mono text-slate-400 mb-2">
+                            <span>0 SOL (Launch)</span>
+                            <span class="text-solanaGreen font-bold">TARGET: 85 SOL (RAYDIUM GRADUATION)</span>
+                        </div>
+                        <div class="w-full h-8 sm:h-10 bg-void rounded-full p-1 border border-white/15 overflow-hidden relative">
+                            <div id="bondingProgressBar" class="h-full rounded-full solana-gradient-bg transition-all duration-500 ease-out flex items-center justify-end pr-3 relative" style="width: 75.1%;">
+                                <span class="w-3 h-3 rounded-full bg-white shadow-[0_0_12px_#fff] animate-ping"></span>
+                            </div>
+                        </div>
+                        <p class="font-mono text-xs text-slate-400 mt-3">
+                            * Simulation reflects Pump.fun's automated constant-product bonding curve mechanics prior to Raydium AMM pool creation.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Botones Interactivos de Simulación -->
+                <!-- Interactive Simulation Controls -->
                 <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/10">
                     <div class="flex flex-wrap items-center justify-center gap-2.5 w-full sm:w-auto">
                         <button onclick="simulateBuy(1)" class="px-4 py-3 rounded-xl bg-surfaceLight hover:bg-solanaGreen hover:text-void border border-solanaGreen/40 font-mono text-xs sm:text-sm font-bold text-solanaGreen transition-all active:scale-95 cursor-pointer">
@@ -559,116 +614,152 @@
                     </div>
 
                     <button onclick="resetCurve()" class="w-full sm:w-auto px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 font-mono text-xs text-slate-300 transition-all cursor-pointer">
-                        ↺ Resetear Simulador
+                        ↺ Reset Simulator
                     </button>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================== -->
-        <!-- 5. NARRATIVA & TOKENOMICS FAIR-LAUNCH (BENTO GRID)                    -->
+        <!-- 5. WHY HYPERCAT? & FAIR-LAUNCH TOKENOMICS                             -->
         <!-- ===================================================================== -->
-        <section id="narrativa" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
-            <div id="tokenomics" class="text-center max-w-3xl mx-auto mb-14">
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
+            <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-cyberCyan bg-cyberCyan/10 px-3.5 py-1.5 rounded-full border border-cyberCyan/30">
-                    MATEMÁTICA PURA DE PUMP.FUN
+                    ENGINEERED FOR VIRAL VELOCITY
                 </span>
                 <h2 class="section-title font-display font-extrabold text-white mt-4 mb-4">
-                    NARRATIVA & <span class="solana-gradient-text">TOKENOMICS</span>
+                    WHY <span class="solana-gradient-text">HYPERCAT ($HCAT)?</span>
                 </h2>
                 <p class="text-slate-400 text-sm sm:text-base">
-                    Nacido en los laboratorios cuánticos de Solana, <strong class="text-white">$HCAT</strong> elimina la manipulación de los VCs y los equipos codiciosos. Todos compran en la misma curva.
+                    Born inside Solana's quantum particle accelerator, <strong class="text-white">$HCAT</strong> eliminates VC manipulation and insider dumps. Everyone enters on the exact same curve.
                 </p>
             </div>
 
-            <!-- Bento Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-                <!-- Card 1: Supply Total -->
-                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-solanaGreen/50 transition-all group">
+            <!-- 3 Feature Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+                <div class="glass-card rounded-3xl p-7 border border-white/10 hover:border-solanaGreen/50 transition-all group">
                     <div class="w-12 h-12 rounded-2xl bg-solanaGreen/15 border border-solanaGreen/30 flex items-center justify-center text-solanaGreen mb-5 group-hover:scale-110 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <p class="font-mono text-xs text-slate-400 uppercase mb-1">SUPPLY TOTAL</p>
-                    <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-2">1,000,000,000</h3>
-                    <p class="text-sm text-slate-400">1 Billón de tokens $HCAT emitidos de forma justa. Cero tokens bloqueados para el equipo.</p>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-2">Quantum Solana Speed</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Sub-second finality and near-zero gas fees on Solana mean instant swaps, rapid arbitrage, and relentless chart momentum 24/7.
+                    </p>
                 </div>
 
-                <!-- Card 2: Impuestos -->
-                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-cyberCyan/50 transition-all group">
+                <div class="glass-card rounded-3xl p-7 border border-white/10 hover:border-cyberCyan/50 transition-all group">
                     <div class="w-12 h-12 rounded-2xl bg-cyberCyan/15 border border-cyberCyan/30 flex items-center justify-center text-cyberCyan mb-5 group-hover:scale-110 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
-                    <p class="font-mono text-xs text-slate-400 uppercase mb-1">IMPUESTOS (TAX)</p>
-                    <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-cyberCyan mb-2">0% / 0%</h3>
-                    <p class="text-sm text-slate-400">0% al comprar, 0% al vender. Opera con total libertad sin slippage artificial ni comisiones ocultas.</p>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-2">100% Degen Community</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Driven by diamond-pawed holders, viral meme raids, and community takeover energy. No VCs, no paid cabals, just pure internet culture.
+                    </p>
                 </div>
 
-                <!-- Card 3: Liquidez Quemada -->
-                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-solanaPurple/50 transition-all group">
+                <div class="glass-card rounded-3xl p-7 border border-white/10 hover:border-solanaPurple/50 transition-all group">
                     <div class="w-12 h-12 rounded-2xl bg-solanaPurple/15 border border-solanaPurple/30 flex items-center justify-center text-solanaPurple mb-5 group-hover:scale-110 transition-transform">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
-                    <p class="font-mono text-xs text-slate-400 uppercase mb-1">LIQUIDEZ RAYDIUM</p>
-                    <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-solanaPurple mb-2">100% QUEMADA</h3>
-                    <p class="text-sm text-slate-400">Al completar la Bonding Curve, los LP tokens se destruyen automáticamente. Anti-rug garantizado por código.</p>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-2">Laser Precision Security</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Immutable SPL contract with Mint & Freeze Authorities permanently revoked from block zero and LP tokens burnt on Raydium.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tokenomics Visual Bars Panel -->
+            <div id="tokenomics" class="glass-card rounded-3xl p-6 sm:p-10 border border-white/15">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-white/10">
+                    <div>
+                        <span class="font-mono text-xs text-solanaGreen font-bold uppercase tracking-wider">PUMP.FUN STANDARD ARCHITECTURE</span>
+                        <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">FAIR-LAUNCH TOKENOMICS</h3>
+                    </div>
+                    <div class="px-4 py-2 rounded-xl bg-void border border-solanaGreen/40 font-mono text-sm font-bold text-solanaGreen">
+                        TOTAL SUPPLY: 1,000,000,000 $HCAT
+                    </div>
                 </div>
 
-                <!-- Card 4: Contrato Renunciado -->
-                <div class="glass-card rounded-3xl p-6 border border-white/10 hover:border-solanaGreen/50 transition-all group">
-                    <div class="w-12 h-12 rounded-2xl bg-solanaGreen/15 border border-solanaGreen/30 flex items-center justify-center text-solanaGreen mb-5 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                        </svg>
+                <div class="space-y-6">
+                    <!-- Bar 1 -->
+                    <div>
+                        <div class="flex justify-between font-mono text-xs sm:text-sm font-bold mb-2">
+                            <span class="text-white">FAIR LAUNCH & COMMUNITY CIRCULATING SUPPLY</span>
+                            <span class="text-solanaGreen">100% (1 Billion)</span>
+                        </div>
+                        <div class="w-full h-4 bg-void rounded-full overflow-hidden p-0.5 border border-white/10">
+                            <div class="h-full w-full rounded-full solana-gradient-bg"></div>
+                        </div>
                     </div>
-                    <p class="font-mono text-xs text-slate-400 uppercase mb-1">SEGURIDAD SPL</p>
-                    <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white mb-2">INMUTABLE</h3>
-                    <p class="text-sm text-slate-400">Mint Authority y Freeze Authority revocados desde el bloque cero en la blockchain de Solana.</p>
+
+                    <!-- Bar 2 -->
+                    <div>
+                        <div class="flex justify-between font-mono text-xs sm:text-sm font-bold mb-2">
+                            <span class="text-white">RAYDIUM LIQUIDITY POOL (BURNT & LOCKED FOREVER)</span>
+                            <span class="text-cyberCyan">100% BURNT 🔥</span>
+                        </div>
+                        <div class="w-full h-4 bg-void rounded-full overflow-hidden p-0.5 border border-white/10">
+                            <div class="h-full w-full rounded-full bg-gradient-to-r from-cyberCyan to-solanaPurple"></div>
+                        </div>
+                    </div>
+
+                    <!-- Bar 3 -->
+                    <div>
+                        <div class="flex justify-between font-mono text-xs sm:text-sm font-bold mb-2">
+                            <span class="text-slate-300">TEAM ALLOCATION / INSIDER PRESALE / BUY-SELL TAX</span>
+                            <span class="text-solanaGreen">0% (ZERO)</span>
+                        </div>
+                        <div class="w-full h-4 bg-void rounded-full overflow-hidden p-0.5 border border-white/10">
+                            <div class="h-full w-0 rounded-full bg-red-500"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================== -->
-        <!-- 6. GENERADOR DE MEMES / PFP INTERACTIVO (MINI-APP INTEGRADA)          -->
+        <!-- 6. INTERACTIVE $HCAT MEME & PFP STUDIO (HTML5 CANVAS)                 -->
         <!-- ===================================================================== -->
-        <section id="meme-generator" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
+        <section id="meme-studio" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-solanaPurple bg-solanaPurple/15 px-3.5 py-1.5 rounded-full border border-solanaPurple/40">
-                    HERRAMIENTA DE RAID COMUNITARIO
+                    COMMUNITY RAID WEAPON
                 </span>
                 <h2 class="section-title font-display font-extrabold text-white mt-4 mb-4">
                     $HCAT <span class="solana-gradient-text">MEME & PFP STUDIO</span>
                 </h2>
                 <p class="text-slate-400 text-sm sm:text-base">
-                    Personaliza tu foto de perfil o crea un meme viral para raidear en X (Twitter) y Telegram. Descárgalo en alta calidad PNG con un clic.
+                    Customize your Quantum HyperCat avatar or generate viral raid memes for X (Twitter) and Telegram. Export in crisp 600x600 HD PNG with one click.
                 </p>
             </div>
 
             <div class="glass-card rounded-3xl p-6 sm:p-8 border border-white/15 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <!-- Lienzo Canvas Previsualización -->
+                <!-- Canvas Preview -->
                 <div class="lg:col-span-6 flex flex-col items-center">
                     <div class="w-full max-w-[380px] aspect-square rounded-2xl overflow-hidden border-2 border-solanaGreen shadow-[0_0_40px_rgba(20,241,149,0.2)] bg-void">
                         <canvas id="memeCanvas" width="600" height="600" class="w-full h-full object-contain"></canvas>
                     </div>
-                    <p class="font-mono text-xs text-slate-400 mt-3">Vista previa en tiempo real (600x600px HD)</p>
+                    <p class="font-mono text-xs text-slate-400 mt-3">Live Real-Time Canvas Preview (600x600px PNG)</p>
                 </div>
 
-                <!-- Controles del Generador -->
+                <!-- Studio Controls -->
                 <div class="lg:col-span-6 space-y-5">
-                    <!-- Selector Color de Gafas Láser -->
+                    <!-- Laser Color Selector -->
                     <div>
-                        <label class="block font-mono text-xs font-bold uppercase text-slate-300 mb-2">1. Color de Gafas Láser</label>
+                        <label class="block font-mono text-xs font-bold uppercase text-slate-300 mb-2">1. Laser Beam Color</label>
                         <div class="grid grid-cols-4 gap-2.5">
                             <button onclick="setMemeLaser('#14F195')" class="py-2.5 rounded-xl bg-void border-2 border-solanaGreen text-solanaGreen font-mono text-xs font-bold hover:bg-solanaGreen/15 transition-all cursor-pointer">
                                 Solana
                             </button>
                             <button onclick="setMemeLaser('#FF2A5F')" class="py-2.5 rounded-xl bg-void border-2 border-rose-500 text-rose-500 font-mono text-xs font-bold hover:bg-rose-500/15 transition-all cursor-pointer">
-                                Láser Rojo
+                                Red Laser
                             </button>
                             <button onclick="setMemeLaser('#00F0FF')" class="py-2.5 rounded-xl bg-void border-2 border-cyberCyan text-cyberCyan font-mono text-xs font-bold hover:bg-cyberCyan/15 transition-all cursor-pointer">
                                 Cyber Cyan
@@ -679,9 +770,18 @@
                         </div>
                     </div>
 
-                    <!-- Selector Fondo Neón -->
+                    <!-- Cat Tilt / Quantum Angle Slider -->
                     <div>
-                        <label class="block font-mono text-xs font-bold uppercase text-slate-300 mb-2">2. Estilo de Fondo Cuántico</label>
+                        <div class="flex justify-between font-mono text-xs font-bold uppercase text-slate-300 mb-2">
+                            <label for="catTiltRange">2. Quantum Cat Angle</label>
+                            <span id="catTiltLabel" class="text-solanaGreen">0°</span>
+                        </div>
+                        <input type="range" id="catTiltRange" min="-18" max="18" value="0" oninput="updateCatTilt(this.value)" class="w-full">
+                    </div>
+
+                    <!-- Background Theme -->
+                    <div>
+                        <label class="block font-mono text-xs font-bold uppercase text-slate-300 mb-2">3. Quantum Background</label>
                         <div class="grid grid-cols-3 gap-2.5">
                             <button onclick="setMemeBg('cyber')" class="py-2.5 px-3 rounded-xl bg-surfaceLight hover:bg-white/10 border border-white/15 font-mono text-xs text-white transition-all cursor-pointer">
                                 🌌 Cyber Void
@@ -695,28 +795,28 @@
                         </div>
                     </div>
 
-                    <!-- Textos Superior e Inferior -->
+                    <!-- Top & Bottom Captions -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                            <label for="memeTopText" class="block font-mono text-xs font-bold uppercase text-slate-300 mb-1.5">Texto Superior</label>
-                            <input type="text" id="memeTopText" value="COMPRÉ $HCAT" maxlength="24" oninput="renderMeme()" class="w-full px-3.5 py-2.5 rounded-xl bg-void border border-white/15 focus:border-solanaGreen focus:outline-none font-mono text-sm text-white">
+                            <label for="memeTopText" class="block font-mono text-xs font-bold uppercase text-slate-300 mb-1.5">Top Caption</label>
+                            <input type="text" id="memeTopText" value="WEN MOON?" maxlength="22" oninput="renderMeme()" class="w-full px-3.5 py-2.5 rounded-xl bg-void border border-white/15 focus:border-solanaGreen focus:outline-none font-mono text-sm text-white">
                         </div>
                         <div>
-                            <label for="memeBottomText" class="block font-mono text-xs font-bold uppercase text-slate-300 mb-1.5">Texto Inferior</label>
-                            <input type="text" id="memeBottomText" value="NOS VEMOS EN RAYDIUM" maxlength="26" oninput="renderMeme()" class="w-full px-3.5 py-2.5 rounded-xl bg-void border border-white/15 focus:border-solanaGreen focus:outline-none font-mono text-sm text-white">
+                            <label for="memeBottomText" class="block font-mono text-xs font-bold uppercase text-slate-300 mb-1.5">Bottom Caption</label>
+                            <input type="text" id="memeBottomText" value="SEE YOU ON RAYDIUM" maxlength="24" oninput="renderMeme()" class="w-full px-3.5 py-2.5 rounded-xl bg-void border border-white/15 focus:border-solanaGreen focus:outline-none font-mono text-sm text-white">
                         </div>
                     </div>
 
-                    <!-- Botón Descargar PNG -->
+                    <!-- Download & Randomize Buttons -->
                     <div class="pt-2 flex flex-col sm:flex-row gap-3">
                         <button onclick="downloadMemePNG()" class="flex-1 neo-border bg-solanaGreen text-void font-display font-extrabold text-sm py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 cursor-pointer">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                             </svg>
-                            <span>DESCARGAR MEME PNG</span>
+                            <span>DOWNLOAD PFP & SHARE</span>
                         </button>
                         <button onclick="randomizeMeme()" class="px-5 py-3.5 rounded-xl bg-solanaPurple/20 hover:bg-solanaPurple/35 border border-solanaPurple font-mono text-xs font-bold text-white transition-all cursor-pointer">
-                            🎲 Aleatorio
+                            🎲 Randomize
                         </button>
                     </div>
                 </div>
@@ -724,165 +824,152 @@
         </section>
 
         <!-- ===================================================================== -->
-        <!-- 7. GUÍA RÁPIDA "CÓMO COMPRAR EN 3 PASOS"                              -->
+        <!-- 7. HOW TO BUY IN 3 STEPS                                              -->
         <!-- ===================================================================== -->
-        <section id="como-comprar" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
+        <section id="how-to-buy" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
             <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-solanaGreen bg-solanaGreen/10 px-3.5 py-1.5 rounded-full border border-solanaGreen/30">
-                    GUÍA DE INICIO RÁPIDO
+                    60-SECOND ONBOARDING
                 </span>
                 <h2 class="section-title font-display font-extrabold text-white mt-4 mb-4">
-                    CÓMO COMPRAR <span class="solana-gradient-text">$HCAT</span> EN 3 PASOS
+                    HOW TO BUY <span class="solana-gradient-text">$HCAT</span> IN 3 STEPS
                 </h2>
                 <p class="text-slate-400 text-sm sm:text-base">
-                    Entra antes de que la Bonding Curve se llene por completo. Solo te tomará 60 segundos.
+                    Get in on the Pump.fun bonding curve before Raydium graduation triggers the next parabolic leg.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Paso 1 -->
+                <!-- Step 1 -->
                 <div class="glass-card rounded-3xl p-7 border border-white/10 relative overflow-hidden">
                     <span class="font-display font-extrabold text-6xl text-white/5 absolute top-4 right-6 select-none">01</span>
                     <div class="w-12 h-12 rounded-2xl bg-solanaPurple/20 border border-solanaPurple flex items-center justify-center font-display font-extrabold text-xl text-solanaPurple mb-5">
                         1
                     </div>
-                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Descarga Phantom o Solflare</h3>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Create a Solana Wallet</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        Instala la extensión de <strong class="text-white">Phantom Wallet</strong> o <strong class="text-white">Solflare</strong> en tu navegador o descarga la app oficial en iOS / Android y guarda tu frase semilla.
+                        Download <strong class="text-white">Phantom</strong> or <strong class="text-white">Solflare</strong> as a browser extension or mobile app on iOS/Android and securely back up your seed phrase.
                     </p>
                 </div>
 
-                <!-- Paso 2 -->
+                <!-- Step 2 -->
                 <div class="glass-card rounded-3xl p-7 border border-white/10 relative overflow-hidden">
                     <span class="font-display font-extrabold text-6xl text-white/5 absolute top-4 right-6 select-none">02</span>
                     <div class="w-12 h-12 rounded-2xl bg-cyberCyan/20 border border-cyberCyan flex items-center justify-center font-display font-extrabold text-xl text-cyberCyan mb-5">
                         2
                     </div>
-                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Consigue SOL en tu Wallet</h3>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Fund With SOL</h3>
                     <p class="text-sm text-slate-400 leading-relaxed">
-                        Compra <strong class="text-white">Solana (SOL)</strong> directamente desde tu wallet con tarjeta o transfiere SOL desde Binance, Coinbase, Bybit o Kraken a tu dirección de Solana.
+                        Buy <strong class="text-white">Solana (SOL)</strong> directly inside Phantom via card/Apple Pay, or send SOL from Coinbase, Binance, Bybit, or Kraken to your Solana address.
                     </p>
                 </div>
 
-                <!-- Paso 3 -->
+                <!-- Step 3 -->
                 <div class="glass-card rounded-3xl p-7 border-2 border-solanaGreen/50 relative overflow-hidden shadow-[0_0_30px_rgba(20,241,149,0.1)]">
                     <span class="font-display font-extrabold text-6xl text-solanaGreen/10 absolute top-4 right-6 select-none">03</span>
                     <div class="w-12 h-12 rounded-2xl bg-solanaGreen text-void flex items-center justify-center font-display font-extrabold text-xl mb-5">
                         3
                     </div>
-                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Entra a Pump.fun y Swapea</h3>
+                    <h3 class="font-display font-extrabold text-xl text-white mb-3">Swap on Pump.fun</h3>
                     <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Abre <strong class="text-solanaGreen">Pump.fun</strong>, conecta tu wallet, pega el Contract Address oficial de <strong class="text-white">$HCAT</strong> e intercambia tus SOL por tokens al instante.
+                        Head to <strong class="text-solanaGreen">Pump.fun</strong>, connect your wallet, paste the official <strong class="text-white">$HCAT</strong> Contract Address, and swap your SOL for $HCAT instantly.
                     </p>
                     <button onclick="copyCA()" class="text-xs font-mono font-bold text-solanaGreen hover:underline flex items-center gap-1 cursor-pointer">
-                        <span>Copiar CA oficial ahora →</span>
+                        <span>Copy Official CA Now →</span>
                     </button>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================== -->
-        <!-- 8. ROADMAP POR FASES (DE LA CURVA A LA LUNA)                          -->
+        <!-- 8. 4-PHASE QUANTUM ROADMAP                                            -->
         <!-- ===================================================================== -->
-        <section id="roadmap" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
+        <section id="roadmap" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32">
             <div class="text-center max-w-3xl mx-auto mb-14">
                 <span class="font-mono text-xs sm:text-sm font-bold uppercase tracking-widest text-solanaPurple bg-solanaPurple/15 px-3.5 py-1.5 rounded-full border border-solanaPurple/40">
-                    PLAN DE VUELO INTERDIMENSIONAL
+                    INTERDIMENSIONAL FLIGHT PLAN
                 </span>
                 <h2 class="section-title font-display font-extrabold text-white mt-4 mb-4">
-                    ROADMAP: DE LA CURVA A <span class="solana-gradient-text">ANDRÓMEDA</span>
+                    QUANTUM <span class="solana-gradient-text">ROADMAP</span>
                 </h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Fase 1 -->
-                <div class="glass-card rounded-3xl p-7 border-t-4 border-t-solanaGreen">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Phase 1 -->
+                <div class="glass-card rounded-3xl p-6 border-t-4 border-t-solanaGreen">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-solanaGreen/20 text-solanaGreen">FASE 01 • EN VIVO</span>
-                        <span class="text-xl">⚡</span>
+                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-solanaGreen/20 text-solanaGreen">PHASE 01 • LIVE</span>
+                        <span class="text-lg">⚡</span>
                     </div>
-                    <h3 class="font-display font-extrabold text-xl text-white mb-4">Ignición en Pump.fun</h3>
-                    <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-solanaGreen font-bold">✓</span>
-                            <span>Lanzamiento Fair-Launch en Pump.fun sin preventa.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-solanaGreen font-bold">✓</span>
-                            <span>Despliegue de web oficial y Meme Studio comunitario.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-solanaGreen font-bold">✓</span>
-                            <span>Raids masivos en X (Twitter) y Telegram (+1,000 Holders).</span>
-                        </li>
+                    <h3 class="font-display font-extrabold text-lg text-white mb-3">Pump.fun Ignition</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2"><span class="text-solanaGreen font-bold">✓</span><span>Fair launch on Pump.fun</span></li>
+                        <li class="flex items-start gap-2"><span class="text-solanaGreen font-bold">✓</span><span>Website & Meme Studio live</span></li>
+                        <li class="flex items-start gap-2"><span class="text-solanaGreen font-bold">✓</span><span>1,000+ Organic Holders</span></li>
                     </ul>
                 </div>
 
-                <!-- Fase 2 -->
-                <div class="glass-card rounded-3xl p-7 border-t-4 border-t-cyberCyan">
+                <!-- Phase 2 -->
+                <div class="glass-card rounded-3xl p-6 border-t-4 border-t-cyberCyan">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-cyberCyan/20 text-cyberCyan">FASE 02 • PRÓXIMA</span>
-                        <span class="text-xl">🔥</span>
+                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-cyberCyan/20 text-cyberCyan">PHASE 02 • NEXT</span>
+                        <span class="text-lg">🔥</span>
                     </div>
-                    <h3 class="font-display font-extrabold text-xl text-white mb-4">Graduación a Raydium</h3>
-                    <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-cyberCyan font-bold">◆</span>
-                            <span>Completar el 100% de la Bonding Curve (85 SOL).</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-cyberCyan font-bold">◆</span>
-                            <span>Migración automática a Raydium DEX + Quema de LP.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-cyberCyan font-bold">◆</span>
-                            <span>Actualización de DexScreener Enhanced & Trending Boosts.</span>
-                        </li>
+                    <h3 class="font-display font-extrabold text-lg text-white mb-3">Raydium Graduation</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2"><span class="text-cyberCyan font-bold">◆</span><span>Hit 100% Bonding Curve (85 SOL)</span></li>
+                        <li class="flex items-start gap-2"><span class="text-cyberCyan font-bold">◆</span><span>Auto Raydium LP & Burn</span></li>
+                        <li class="flex items-start gap-2"><span class="text-cyberCyan font-bold">◆</span><span>DexScreener Trending Boosts</span></li>
                     </ul>
                 </div>
 
-                <!-- Fase 3 -->
-                <div class="glass-card rounded-3xl p-7 border-t-4 border-t-solanaPurple">
+                <!-- Phase 3 -->
+                <div class="glass-card rounded-3xl p-6 border-t-4 border-t-solanaPurple">
                     <div class="flex items-center justify-between mb-4">
-                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-solanaPurple/20 text-solanaPurple">FASE 03 • EXPANSIÓN</span>
-                        <span class="text-xl">🚀</span>
+                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-solanaPurple/20 text-solanaPurple">PHASE 03 • SCALE</span>
+                        <span class="text-lg">🚀</span>
                     </div>
-                    <h3 class="font-display font-extrabold text-xl text-white mb-4">Dominación Cuántica</h3>
-                    <ul class="space-y-3 text-sm text-slate-300">
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-solanaPurple font-bold">★</span>
-                            <span>Takeover Comunitario (CTO) y tesorería de marketing viral.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-solanaPurple font-bold">★</span>
-                            <span>Concursos semanales de memes con premios en $SOL y $HCAT.</span>
-                        </li>
-                        <li class="flex items-start gap-2.5">
-                            <span class="text-solanaPurple font-bold">★</span>
-                            <span>Listados en CoinGecko, CoinMarketCap y CEX Tier-1/2.</span>
-                        </li>
+                    <h3 class="font-display font-extrabold text-lg text-white mb-3">CEX & Viral Raids</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2"><span class="text-solanaPurple font-bold">★</span><span>CoinGecko & CMC Fast-Track</span></li>
+                        <li class="flex items-start gap-2"><span class="text-solanaPurple font-bold">★</span><span>Weekly SOL Meme Bounties</span></li>
+                        <li class="flex items-start gap-2"><span class="text-solanaPurple font-bold">★</span><span>Tier-1 & Tier-2 CEX Listings</span></li>
+                    </ul>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="glass-card rounded-3xl p-6 border-t-4 border-t-white">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="font-mono text-xs font-bold px-3 py-1 rounded-full bg-white/15 text-white">PHASE 04 • MOON</span>
+                        <span class="text-lg">🌌</span>
+                    </div>
+                    <h3 class="font-display font-extrabold text-lg text-white mb-3">Quantum Ecosystem</h3>
+                    <ul class="space-y-2.5 text-sm text-slate-300">
+                        <li class="flex items-start gap-2"><span class="text-solanaGreen font-bold">✦</span><span>HyperCat Telegram Raid Bot</span></li>
+                        <li class="flex items-start gap-2"><span class="text-solanaGreen font-bold">✦</span><span>10,000+ Quantum Cat Army</span></li>
+                        <li class="flex items-start gap-2"><span class="text-solanaGreen font-bold">✦</span><span>Solana Blue-Chip Status</span></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================== -->
-        <!-- CTA FINAL DE CONVERSIÓN                                               -->
+        <!-- FINAL CONVERSION CTA BANNER                                           -->
         <!-- ===================================================================== -->
         <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
             <div class="rounded-3xl p-8 sm:p-12 solana-gradient-bg text-void text-center relative overflow-hidden shadow-[0_0_60px_rgba(20,241,149,0.3)]">
                 <h2 class="font-display font-extrabold text-3xl sm:text-5xl tracking-tight mb-4">
-                    NO TE QUEDES MIRANDO LA GRÁFICA DESDE FUERA
+                    DON'T WATCH THE GREEN CANDLES FROM THE SIDELINES
                 </h2>
                 <p class="font-medium text-base sm:text-lg max-w-2xl mx-auto mb-8 text-void/90">
-                    La caja de Schrödinger está abierta y $HCAT ya saltó hacia la luna. Copia el CA o entra directo a Pump.fun ahora mismo.
+                    Schrödinger's box is wide open and $HCAT is already blasting toward Raydium. Copy the CA or ape directly on Pump.fun right now.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="https://pump.fun" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-void text-solanaGreen font-display font-extrabold text-base tracking-wide hover:scale-105 transition-transform shadow-2xl">
-                        COMPRAR $HCAT EN PUMP.FUN 🚀
+                        BUY $HCAT ON PUMP.FUN 🚀
                     </a>
                     <button onclick="copyCA()" class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-void/15 hover:bg-void/25 border-2 border-void font-mono font-bold text-sm text-void transition-all cursor-pointer">
-                        COPIAR CONTRACT ADDRESS
+                        COPY CONTRACT ADDRESS
                     </button>
                 </div>
             </div>
@@ -890,15 +977,15 @@
     </main>
 
     <!-- ===================================================================== -->
-    <!-- 9. FOOTER CON DISCLAIMER LEGAL ESTÁNDAR DE MEMECOINS                  -->
+    <!-- 9. FOOTER WITH STANDARD MEMECOIN LEGAL DISCLAIMER                     -->
     <!-- ===================================================================== -->
     <footer class="relative z-10 border-t border-white/10 bg-void/95 mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
                 <div class="flex items-center gap-3">
-                    <span class="font-display font-extrabold text-2xl solana-gradient-text">$HCAT</span>
+                    <span class="font-display font-extrabold text-2xl solana-gradient-text">HYPERCAT ($HCAT)</span>
                     <span class="text-slate-500">|</span>
-                    <span class="font-mono text-xs text-slate-400">The First Quantum Cat on Solana</span>
+                    <span class="font-mono text-xs text-slate-400">The Quantum Meme on Solana</span>
                 </div>
 
                 <div class="flex flex-wrap items-center justify-center gap-5 text-sm font-mono text-slate-400">
@@ -910,10 +997,10 @@
                 </div>
             </div>
 
-            <!-- Disclaimer Legal Obligatorio Memecoins -->
+            <!-- Legal Disclaimer -->
             <div class="pt-8 text-center md:text-left">
                 <p class="font-mono text-[11px] sm:text-xs text-slate-500 leading-relaxed">
-                    <strong class="text-slate-400">AVISO LEGAL (DISCLAIMER):</strong> $HCAT (HyperCat) es una memecoin creada exclusivamente con fines de entretenimiento y cultura comunitaria en la red Solana. No tiene valor intrínseco, no promete retornos financieros ni constituye asesoramiento de inversión. Las criptomonedas y memecoins conllevan una volatilidad extrema y alto riesgo de pérdida de capital. Haz siempre tu propia investigación (DYOR) antes de interactuar con cualquier contrato inteligente.
+                    <strong class="text-slate-400">LEGAL DISCLAIMER:</strong> $HCAT (HyperCat) is a meme coin created strictly for entertainment and community culture purposes on the Solana blockchain. It has no intrinsic value, makes no promises of financial return, and does not constitute financial or investment advice. Cryptocurrency and meme coin trading carries extreme volatility and high risk of capital loss. Always Do Your Own Research (DYOR) before interacting with any smart contract.
                 </p>
                 <p class="font-mono text-xs text-slate-600 mt-4">
                     © 2026 HyperCat ($HCAT) Community. Built on Solana ⚡ Powered by Pump.fun.
@@ -923,11 +1010,11 @@
     </footer>
 
     <!-- ===================================================================== -->
-    <!-- JAVASCRIPT PURO: INTERACTIVIDAD, SIMULADOR, MEME STUDIO & PARTÍCULAS  -->
+    <!-- VANILLA JAVASCRIPT: CA COPY, SIMULATOR, MEME STUDIO & PARTICLES       -->
     <!-- ===================================================================== -->
     <script>
         // =========================================================================
-        // 1. GESTIÓN DE CONTRACT ADDRESS (CA) Y NOTIFICACIONES TOAST
+        // 1. CONTRACT ADDRESS (CA) COPY & NON-BLOCKING TOAST NOTIFICATIONS
         // =========================================================================
         const CONTRACT_ADDRESS = "HCat9xKpL7vM2qR8wZ4nJ6bT3yF1dS5gP8mN2xPump";
         let toastTimeout = null;
@@ -948,7 +1035,6 @@
         }
 
         function copyCA() {
-            // Uso de textarea temporal + document.execCommand('copy') para máxima compatibilidad en iframes
             const tempInput = document.createElement('textarea');
             tempInput.value = CONTRACT_ADDRESS;
             tempInput.style.position = 'fixed';
@@ -959,24 +1045,24 @@
 
             try {
                 document.execCommand('copy');
-                showToast("¡COPIADO AL PORTAPAPELES! 🚀");
+                showToast("COPIED TO CLIPBOARD! 🚀");
                 
                 const btnLabel = document.getElementById('copyBtnLabel');
                 if (btnLabel) {
                     const originalText = btnLabel.textContent;
-                    btnLabel.textContent = "¡COPIADO! 🚀";
+                    btnLabel.textContent = "COPIED! 🚀";
                     setTimeout(() => {
                         btnLabel.textContent = originalText;
                     }, 2200);
                 }
             } catch (err) {
-                showToast("Error al copiar. Selecciona el CA manualmente.");
+                showToast("Copy failed. Please select the CA manually.");
             }
             document.body.removeChild(tempInput);
         }
 
         // =========================================================================
-        // 2. MENÚ MÓVIL Y CONEXIÓN WALLET SIMULADA
+        // 2. MOBILE DRAWER & SIMULATED WALLET CONNECTION
         // =========================================================================
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -993,20 +1079,20 @@
             walletConnected = !walletConnected;
             const walletBtnText = document.getElementById('walletBtnText');
             if (walletConnected) {
-                walletBtnText.textContent = "7xKp...9vSol (Conectado)";
-                showToast("Wallet Solana vinculada en modo lectura ⚡");
+                walletBtnText.textContent = "7xKp...9vSol (Connected)";
+                showToast("Solana Wallet connected in read-only mode ⚡");
             } else {
-                walletBtnText.textContent = "Conectar Phantom";
-                showToast("Wallet desconectada");
+                walletBtnText.textContent = "Connect Wallet";
+                showToast("Wallet disconnected");
             }
         }
 
         // =========================================================================
-        // 3. SIMULADOR INTERACTIVO DE LA BONDING CURVE DE PUMP.FUN
+        // 3. INTERACTIVE PUMP.FUN BONDING CURVE SIMULATOR
         // =========================================================================
         const TARGET_SOL = 85.0;
         const TARGET_MCAP = 69000;
-        let currentSol = 62.5;
+        let currentSol = 63.8;
 
         function updateBondingUI() {
             const percentage = Math.min((currentSol / TARGET_SOL) * 100, 100);
@@ -1017,46 +1103,57 @@
             document.getElementById('curvePercentDisplay').textContent = percentage.toFixed(1) + '%';
             document.getElementById('bondingProgressBar').style.width = percentage + '%';
 
+            // Update dynamic SVG curve dot position
+            const dot = document.getElementById('curveDot');
+            if (dot) {
+                const ratio = percentage / 100;
+                const cx = 10 + ratio * 300;
+                const cy = 115 - Math.pow(ratio, 1.35) * 100;
+                dot.setAttribute('cx', cx.toFixed(1));
+                dot.setAttribute('cy', cy.toFixed(1));
+            }
+
             const statusEl = document.getElementById('poolStatusDisplay');
             if (currentSol >= TARGET_SOL) {
-                statusEl.textContent = "🔥 ¡GRADUADO A RAYDIUM!";
+                statusEl.textContent = "🔥 GRADUATED TO RAYDIUM!";
                 statusEl.className = "font-mono font-extrabold text-sm sm:text-base text-solanaGreen mt-1 animate-pulse";
-            } else if (percentage >= 85) {
-                statusEl.textContent = "🚀 KING OF THE HILL";
+            } else if (percentage >= 75) {
+                statusEl.textContent = "👑 KING OF THE HILL";
                 statusEl.className = "font-mono font-bold text-sm sm:text-base text-cyberCyan mt-1";
             } else {
-                statusEl.textContent = "⚡ ACUMULANDO EN PUMP";
+                statusEl.textContent = "⚡ BONDING IN PROGRESS";
                 statusEl.className = "font-mono font-bold text-sm sm:text-base text-yellow-400 mt-1";
             }
         }
 
         function simulateBuy(amount) {
             if (currentSol >= TARGET_SOL) {
-                showToast("¡La curva ya está al 100% y graduada a Raydium! 🔥");
+                showToast("Bonding curve is 100% full & graduated to Raydium! 🔥");
                 return;
             }
             currentSol = Math.min(currentSol + amount, TARGET_SOL);
             updateBondingUI();
 
             if (currentSol >= TARGET_SOL) {
-                showToast("🎉 ¡BONDING CURVE COMPLETADA! Liquidez migrando a Raydium...");
+                showToast("🎉 BONDING CURVE COMPLETE! Liquidity migrating to Raydium...");
             } else {
-                showToast(`+${amount} SOL añadidos a la curva de $HCAT ⚡`);
+                showToast(`+${amount} SOL added to $HCAT bonding curve ⚡`);
             }
         }
 
         function resetCurve() {
-            currentSol = 62.5;
+            currentSol = 63.8;
             updateBondingUI();
-            showToast("Simulador de Bonding Curve reiniciado");
+            showToast("Bonding Curve simulator reset");
         }
 
         // =========================================================================
-        // 4. GENERADOR DE MEMES / PFP INTERACTIVO EN CANVAS HTML5
+        // 4. INTERACTIVE $HCAT MEME & PFP STUDIO (HTML5 CANVAS)
         // =========================================================================
         let memeState = {
             laserColor: '#14F195',
-            bgTheme: 'cyber'
+            bgTheme: 'cyber',
+            catTilt: 0
         };
 
         function setMemeLaser(color) {
@@ -1069,14 +1166,24 @@
             renderMeme();
         }
 
+        function updateCatTilt(val) {
+            memeState.catTilt = parseInt(val, 10) || 0;
+            document.getElementById('catTiltLabel').textContent = memeState.catTilt + '°';
+            renderMeme();
+        }
+
         function randomizeMeme() {
             const lasers = ['#14F195', '#FF2A5F', '#00F0FF', '#FACC15'];
             const bgs = ['cyber', 'solana', 'hyper'];
-            const topPhrases = ['COMPRÉ $HCAT', 'MODO CUÁNTICO', '0% TAX DEGEN', 'SCHRÖDINGER PUMP', 'NO VENDO NI UNO'];
-            const bottomPhrases = ['NOS VEMOS EN RAYDIUM', 'A 100M MARKET CAP', 'SOLANA SUMMER 2026', 'BONDING CURVE ROTA', 'DIAMOND PAWS 💎🐾'];
+            const topPhrases = ['WEN MOON?', 'BOUGHT $HCAT', '0% TAX DEGEN', 'QUANTUM LASER CAT', 'DIAMOND PAWS ONLY'];
+            const bottomPhrases = ['SEE YOU ON RAYDIUM', 'NEXT 100X ON SOLANA', 'BONDING CURVE BROKEN', 'SEND IT TO ANDROMEDA', 'PUMP.FUN LEGEND'];
 
             memeState.laserColor = lasers[Math.floor(Math.random() * lasers.length)];
             memeState.bgTheme = bgs[Math.floor(Math.random() * bgs.length)];
+            const randomTilt = Math.floor(Math.random() * 25) - 12;
+            document.getElementById('catTiltRange').value = randomTilt;
+            updateCatTilt(randomTilt);
+
             document.getElementById('memeTopText').value = topPhrases[Math.floor(Math.random() * topPhrases.length)];
             document.getElementById('memeBottomText').value = bottomPhrases[Math.floor(Math.random() * bottomPhrases.length)];
             renderMeme();
@@ -1089,7 +1196,7 @@
             const w = canvas.width;
             const h = canvas.height;
 
-            // 1. Fondo según temática elegida
+            // 1. Background Theme
             const grad = ctx.createLinearGradient(0, 0, w, h);
             if (memeState.bgTheme === 'solana') {
                 grad.addColorStop(0, '#061A14');
@@ -1106,7 +1213,7 @@
             ctx.fillStyle = grad;
             ctx.fillRect(0, 0, w, h);
 
-            // Cuadrícula decorativa en el fondo del meme
+            // Cyber Grid Overlay
             ctx.strokeStyle = 'rgba(20, 241, 149, 0.08)';
             ctx.lineWidth = 1.5;
             for (let i = 0; i <= w; i += 40) {
@@ -1114,122 +1221,141 @@
                 ctx.beginPath(); ctx.moveTo(0, i); ctx.lineTo(w, i); ctx.stroke();
             }
 
-            // Aura brillante detrás del gato
-            const radial = ctx.createRadialGradient(300, 310, 30, 300, 310, 230);
+            // Radial Aura behind Emblem
+            const radial = ctx.createRadialGradient(300, 300, 30, 300, 300, 240);
             radial.addColorStop(0, memeState.laserColor + '55');
             radial.addColorStop(1, 'transparent');
             ctx.fillStyle = radial;
             ctx.fillRect(0, 0, w, h);
 
-            // 2. Dibujo vectorial del Gato Cuántico centrado
+            // 2. Quantum Emblem & Leaping Cyber Cat
             ctx.save();
-            ctx.translate(300, 315);
+            ctx.translate(300, 300);
+            ctx.rotate((memeState.catTilt * Math.PI) / 180);
 
-            // Orejas
-            ctx.fillStyle = '#141726';
-            ctx.strokeStyle = '#14F195';
-            ctx.lineWidth = 6;
-            ctx.beginPath();
-            ctx.moveTo(-115, -60); ctx.lineTo(-140, -175); ctx.lineTo(-45, -110);
-            ctx.closePath(); ctx.fill(); ctx.stroke();
-
-            ctx.strokeStyle = '#00F0FF';
-            ctx.beginPath();
-            ctx.moveTo(115, -60); ctx.lineTo(140, -175); ctx.lineTo(45, -110);
-            ctx.closePath(); ctx.fill(); ctx.stroke();
-
-            // Cabeza
-            ctx.fillStyle = '#11131F';
+            // Outer Purple Emblem Ring
+            ctx.fillStyle = '#090A12';
             ctx.strokeStyle = '#9945FF';
-            ctx.lineWidth = 7;
+            ctx.lineWidth = 8;
             ctx.beginPath();
-            ctx.arc(0, 0, 130, 0, Math.PI * 2);
+            ctx.arc(0, 0, 165, 0, Math.PI * 2);
             ctx.fill();
             ctx.stroke();
 
-            // Cuerpo / Traje espacial
-            ctx.fillStyle = '#16192B';
+            // Inner Dashed Ring
+            ctx.setLineDash([14, 10]);
+            ctx.strokeStyle = '#00F0FF';
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.arc(0, 0, 146, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Leaping Cat Silhouette
+            ctx.fillStyle = '#0D0E15';
             ctx.strokeStyle = '#14F195';
-            ctx.lineWidth = 6;
-            ctx.beginPath();
-            ctx.roundRect(-105, 115, 210, 110, 30);
-            ctx.fill();
-            ctx.stroke();
-
-            // Medallón $HCAT
-            ctx.fillStyle = '#06060A';
-            ctx.beginPath();
-            ctx.arc(0, 165, 32, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.stroke();
-            ctx.fillStyle = '#14F195';
-            ctx.font = '800 18px "JetBrains Mono", monospace';
-            ctx.textAlign = 'center';
-            ctx.fillText('$HCAT', 0, 172);
-
-            // Visor de Gafas Láser
-            ctx.fillStyle = '#06060A';
-            ctx.strokeStyle = memeState.laserColor;
-            ctx.lineWidth = 6;
-            ctx.beginPath();
-            ctx.roundRect(-115, -35, 230, 56, 18);
-            ctx.fill();
-            ctx.stroke();
-
-            // Haz Láser Brillante
-            ctx.shadowColor = memeState.laserColor;
-            ctx.shadowBlur = 25;
-            ctx.fillStyle = memeState.laserColor;
-            ctx.fillRect(-102, -16, 204, 18);
-
-            // Rayos láser disparando fuera de las gafas
-            ctx.strokeStyle = '#FFFFFF';
             ctx.lineWidth = 5;
             ctx.beginPath();
-            ctx.moveTo(-260, -7);
-            ctx.lineTo(260, -7);
+            ctx.moveTo(-45, -35);
+            ctx.quadraticCurveTo(10, -65, 75, -30);
+            ctx.lineTo(125, 5);
+            ctx.lineTo(80, 5);
+            ctx.lineTo(100, 42);
+            ctx.lineTo(52, 8);
+            ctx.quadraticCurveTo(10, 10, -25, 30);
+            ctx.lineTo(-75, 65);
+            ctx.lineTo(-42, 15);
+            ctx.lineTo(-95, 48);
+            ctx.lineTo(-45, -35);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+            // Cat Geometric Head
+            ctx.fillStyle = '#0D0E15';
+            ctx.strokeStyle = '#14F195';
+            ctx.lineWidth = 5;
+            ctx.beginPath();
+            ctx.moveTo(-98, -75);
+            ctx.lineTo(-105, -130);
+            ctx.lineTo(-65, -100);
+            ctx.lineTo(-28, -130);
+            ctx.lineTo(-20, -75);
+            ctx.quadraticCurveTo(-58, -32, -98, -75);
+            ctx.closePath();
+            ctx.fill();
+            ctx.stroke();
+
+            // Laser Beams Shooting Out
+            ctx.shadowColor = memeState.laserColor;
+            ctx.shadowBlur = 24;
+            ctx.strokeStyle = memeState.laserColor;
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(-80, -78);
+            ctx.lineTo(-280, -5);
+            ctx.moveTo(-45, -78);
+            ctx.lineTo(-280, 15);
+            ctx.stroke();
+
+            ctx.strokeStyle = '#FFFFFF';
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(-80, -78);
+            ctx.lineTo(-280, -5);
+            ctx.moveTo(-45, -78);
+            ctx.lineTo(-280, 15);
             ctx.stroke();
             ctx.shadowBlur = 0;
 
-            // Nariz y sonrisa
-            ctx.fillStyle = '#14F195';
+            // Glowing Eye Nodes
+            ctx.fillStyle = '#FFFFFF';
             ctx.beginPath();
-            ctx.moveTo(-14, 48); ctx.lineTo(14, 48); ctx.lineTo(0, 62);
-            ctx.closePath(); ctx.fill();
+            ctx.arc(-80, -78, 6, 0, Math.PI * 2);
+            ctx.arc(-45, -78, 6, 0, Math.PI * 2);
+            ctx.fill();
 
-            ctx.strokeStyle = '#FFFFFF';
+            // Emblem Text Banner
+            ctx.fillStyle = '#090A12';
+            ctx.strokeStyle = '#9945FF';
             ctx.lineWidth = 5;
             ctx.beginPath();
-            ctx.arc(0, 68, 34, 0.15 * Math.PI, 0.85 * Math.PI);
+            ctx.roundRect(-145, 68, 290, 56, 12);
+            ctx.fill();
             ctx.stroke();
+
+            ctx.fillStyle = '#14F195';
+            ctx.font = '800 34px "Syne", sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('HYPERCAT', 0, 106);
 
             ctx.restore();
 
-            // 3. Renderizado de Texto Superior e Inferior estilo Meme Clásico / Neo
+            // 3. Top & Bottom Meme Captions
             const topText = (document.getElementById('memeTopText').value || '').toUpperCase();
             const bottomText = (document.getElementById('memeBottomText').value || '').toUpperCase();
 
             ctx.textAlign = 'center';
             ctx.lineJoin = 'round';
 
-            // Texto Superior
+            // Top Caption
             ctx.font = '800 44px "Syne", sans-serif';
             ctx.lineWidth = 10;
             ctx.strokeStyle = '#06060A';
-            ctx.strokeText(topText, w / 2, 68);
+            ctx.strokeText(topText, w / 2, 64);
             ctx.fillStyle = '#FFFFFF';
-            ctx.fillText(topText, w / 2, 68);
+            ctx.fillText(topText, w / 2, 64);
 
-            // Texto Inferior
-            ctx.font = '800 40px "Syne", sans-serif';
+            // Bottom Caption
+            ctx.font = '800 38px "Syne", sans-serif';
             ctx.lineWidth = 10;
             ctx.strokeStyle = '#06060A';
             ctx.strokeText(bottomText, w / 2, h - 34);
             ctx.fillStyle = memeState.laserColor;
             ctx.fillText(bottomText, w / 2, h - 34);
 
-            // Marca de agua discreta
-            ctx.font = '700 14px "JetBrains Mono", monospace';
+            // Subtle Watermark
+            ctx.font = '700 13px "JetBrains Mono", monospace';
             ctx.fillStyle = 'rgba(255,255,255,0.65)';
             ctx.fillText('PUMP.FUN // $HCAT', w / 2, h - 10);
         }
@@ -1240,11 +1366,11 @@
             link.download = 'HCAT-Quantum-Meme.png';
             link.href = canvas.toDataURL('image/png');
             link.click();
-            showToast("¡Meme PNG descargado! Listo para raidear en X 🔥");
+            showToast("HD PNG Meme Downloaded! Ready to raid X 🔥");
         }
 
         // =========================================================================
-        // 5. ANIMACIÓN DE PARTÍCULAS CUÁNTICAS EN EL FONDO (CANVAS RESPONSIVO)
+        // 5. RESPONSIVE QUANTUM BACKGROUND PARTICLES
         // =========================================================================
         function initQuantumParticles() {
             const canvas = document.getElementById('quantumCanvas');
@@ -1290,7 +1416,7 @@
             animate();
         }
 
-        // Inicialización al cargar la página
+        // Initialize on window load
         window.onload = function () {
             updateBondingUI();
             renderMeme();
